@@ -1,8 +1,8 @@
-(defproject todo-list "0.1.0-SNAPSHOT"
-  :description "A simple webapp using Ring"
-  :url "http://example.com/FIXME"
-  :license {:name "Eclipse Public License"
-            :url "http://www.eclipse.org/legal/epl-v10.html"}
+(defproject webdev "0.1.0-SNAPSHOT"
+  :description "Simple to do app"
+  :url "http://http://clojure-todo-list.herokuapp.com/"
+  :license {:name "IntelliJ Public License"
+            :url ""}
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [ring "1.4.0-beta2"]
                  [compojure "1.3.4"]
