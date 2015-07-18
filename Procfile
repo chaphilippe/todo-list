@@ -1,1 +1,1 @@
-web: java $JVM_OPTS -cp target/todo-list.jar -main -m todo-list.core $PORT
+web: java $JVM_OPTS -cp target/todo-list.jar clojure.main -m todo-list.core $PORT

@@ -1,5 +1,6 @@
 (ns todo-list.core
-  (:require [ring.adapter.jetty :as jetty]))
+  (:require [ring.adapter.jetty :as jetty])
+  (:gen-class))
 
 (defn -main
   "A very simple web server using Ring & Jetty"
