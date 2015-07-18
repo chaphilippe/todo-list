@@ -1,7 +1,8 @@
 (ns todo-list.handlers
   (:use
     [hiccup.core]
-    [hiccup.page]))
+    [hiccup.page]
+    [ring.handler.dump :refer [handle-dump]]))
 
 
 (defn welcome
@@ -27,6 +28,13 @@
   [request]
   (html [:h1 "About the Website"]
         [:p "I am an awesome Clojure developer, well getting there... trying some Hiccup now"]))
+
+(defn request-info
+  "View the information contained in the request, useful for debugging"
+  [request]
+  {:status 200
+   :body (pr-str request)
+   :headers {}})
 
 (defn hello
   "A simple personalised greeting showing the use of variable parth elements"

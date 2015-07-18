@@ -3,12 +3,16 @@
             [ring.middleware.reload :refer [wrap-reload]]
             [compojure.core :refer [defroutes GET]]
             [compojure.route :refer [not-found]]
-            [todo-list.handlers :refer [welcome goodbye about]]))
+            [todo-list.handlers :refer [welcome goodbye about hello calculator]]
+            [ring.handler.dump :refer [handle-dump]]))
 
 (defroutes app
            (GET "/" [] welcome)
            (GET "/about" [] about)
            (GET "/goodbye" [] goodbye)
+           (GET "/request-info" [] handle-dump)
+           (GET "/hello/:name" [] hello)
+           (GET "/calculator/:a/:op/:b" [] calculator)
            (not-found "Sorry, page not found"))
 
 (defn -main
